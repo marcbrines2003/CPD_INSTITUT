@@ -297,4 +297,387 @@ Algunes de les dades que emmagatzemarà i de ahí la creació d’aquest project
 
 - **Correus electrònics i comunicacions:** Historial de comunicacions del personal. 
 - **Documents i plantilles administratives:** Arxius de treball habituals per al personal 
-Xavi Garcia Ferrando, Marc Brines Bañuls i Josep Calvo                                            18 
+Xavi Garcia Ferrando, Marc Brines Bañuls                                            18 
+
+![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.001.png)
+
+**SEGON SPRINT** 
+
+
+Xavi Garcia Ferrando 
+
+Marc Brines Bañuls PROJECTE SEGON SPRINT 
+
+**INDEX** 
+
+[**DIAGRAMA(servers, emmagatzematge, xarxa)...................................................................2](#_page2_x72.00_y72.00) **[ELECCIÓ DE PROGRAMES SEGONS NECESITATS...........................................................3](#_page3_x72.00_y98.45) [POLÍTIQUES DE PRIVACITAT................................................................................................5](#_page5_x72.00_y72.00) [PROTECCIÓ INTERNA I EXTERNA.......................................................................................6](#_page6_x72.00_y72.00) [PROCEDIMENTS DE CÒPIES I RESTAURACIÓ...................................................................7](#_page7_x72.00_y292.84) [PLA EN CAS DE FALLADA....................................................................................................8](#_page8_x72.00_y72.00) [MANUAL D’USUARI............................................................................................................... 9](#_page9_x72.00_y72.00) [GUIA D’ADMINISTRACIÓ DEL CPD....................................................................................10](#_page10_x72.00_y72.00) [DOCUMENTACIÓ DEL CPD FÍSIC DE L’INSTITUT.............................................................11](#_page11_x72.00_y98.45)** 
+# <a name="_page2_x72.00_y72.00"></a>**DIAGRAMA(servers, emmagatzematge, xarxa)** 
+
+<img src="../planol.jpg" alt="Plano">
+
+
+Aquest diagrama mostra la disposició dels servidors, dispositius d’emmagatzematge i components de la xarxa.  
+
+Per al nostre cas, ta topología de xarxa mes correcta seria la **jeràrquica** (arbre) perque permet una xarxa organitzada, segura i eficient per al nostre entorn. 
+
+- Estructura escalable i organitzada. 
+  - Xarxa segmenta amb un router principal que es comporta com a punt central de connexió. 
+  - El core switch distribuix la connexió de les VLANs. 
+- Segmentació mitjançant VLANs. 
+- S’utilitzen VLANs per a separar els distints tipus de tràfic: 
+- VLAN 10: Professors 
+- VLAN 20: Alumnes (ESO/BATX) 
+- VLAN 30: Alumnes (Cicles) 
+- Zona desmilitaritzada (DMZ). 
+  - Allotja servidors web i de correu, protegint la xarxa interna de accessos externs i atacs. 
+- Facilitat de creiximent i manteniment. 
+- Es fàcil d’agregar més VLANs, servidors o equips. 
+# **ELECCIÓ DE PROGRAMES SEGONS** 
+# <a name="_page3_x72.00_y98.45"></a>**NECESITATS**
+**ADMISTRACIÓ DEL SERVIDOR I DE LA RED** 
+
+- **Active directory:** Per gestionar usuaris, permisos i polítiques de accés. 
+- **DNS y DHCP:** Per gestionar direccions IP y noms de dominis interns. 
+- **Group Policy Management:** Per aplicar configuracions als equips de la red. 
+- **Hyper-V:** Si es necesita virtualització de servidors. 
+- **PowerShell:** Per automatització i gestió avançada del server. 
+
+**SEGURETAT I PROTECCIÓ** 
+
+- **Antivirus service executable:** El que va instal·lat predeterminat (gratis). 
+- **Firewall:** No necessitarem d’aquest ja que en la macrolan de conselleria, hi fan servir un. 
+- **SIEM:** Per monitoritzar amenaces i events de seguretat. 
+- **AOMEI backuper:** Per a fer copies de seguretat de dades crítiques. 
+- **DETECCIO DE INTRUSOS** (*suricata*): Per veure si hi ha usuaris no desitjats. 
+
+**ADMINISTRACIÓ I GESTIÓ DE USUARIS** 
+
+- **Microsoft 365:** Per gestió de correus i ferramentes colaboratives. 
+- **Worksapce for Education:** Si el intitut gasta el drive, gmail, classroom… 
+- **Control de Inventari**: Per a gestionar hardware i software de la institució. 
+- **Gestió escolar:** Per a la gestió de alumnes, calificacions i assistencia. 
+
+**FERRAMENTES PER SOPORTS TECTNICS** 
+
+- **Remote Desktop (AnyDesk):** Per soport remot de docents i administratius. 
+- **Monitorització de la red:** Per supervisar el rendiment de l’estructura. 
+- **Systernals Suite:** Per análisi i diagnostic de problemes en Windows Server. 
+
+**SERVICIS WEB I ALMACENAMENT** 
+
+- **IIS:** Per allotjar pàgines web internes o aplicacions del institut. 
+- **Servidor SFTP:** Per transferir archius. 
+- **Servidor de archius:** Per gestionar els recursos compartits. 
+
+**VIRTUALITZACIÓ I CONTENEDORS** 
+
+- **VMWare / Proxmox :** Si es requereix virtualitzar més serveis. 
+- **Docker i kubernetes:** Per desplegar aplicacions modernes en contenedors
+
+**IDENTIFICACIÓ DE MODELS DELS DISPOSITIUS** 
+
+- **Router principal:** Miktrotik chr 
+- **switch:** Cisco IOU L2/3, en windows server que es el nostre sistema operatiu no hi ha un switch dedicat per a aquest, pero es pot gastar Hyper-V amb VLANs per a simular les xarxes separades. 
+- **Servidor web:** 
+- Windows Server 19/22 amb IIS per al server web 
+- Windows  Server  amb  Microsoft  Exchange  Server  per  a  correu electronic 
+- **Server  de  archius  (VLAN10):** En aquest gastarem windows server 19/22 amb File Server Role, que permet compartir archius en la xarxa com un NAS. 
+- **PCs alumnes:**  
+- ESO / Batxillerat: Gastaran lliurex. 
+- Professorat: Gastaran Windows, mitjançant un Active Directory. 
+- FP: Gastaràn el sistema operatiu de Ubuntu. 
+- **PC Administració:** Usarem, com en l’anterior windows 10 i 11 VM amb accés a ferramentes administratives, està en una VLAN separada per a una major seguretat. 
+- **Acces  point:**  En  aquest  cas  també  apostarem  per  un  mikrotik chr per a gestionar el wifi. 
+
+En dues ocasions en el nostre projecte hem gastat miktrotiks, ja hem dut proves a terme en aquest router per saber que es de la nostra confiança, hem ficat un switch nou per tal de veure com es el seu funcionament dins del nostre plà de projecte, ja que hem investigat sobre aquest i s’adapta a les nostres necesitats. Seguim en els servidors, que hi gastarem els windows servers ja que es el nostre sistema operatiu elegit, per què per al nostre gust s’adapta a les necessitats a més de tindre un ús més fàcil que els demés sistemes. Els ordenadors tindrem tots ús del windows tant 10 com el 11 per a disfrutar de les seues ferramentes enfocades cara la educació i la facilitat per als usuaris del centre. 
+# <a name="_page5_x72.00_y72.00"></a>**POLÍTIQUES DE PRIVACITAT** 
+**POLÍTIQUES ENFRONT L’ INSTITUT**: 
+
+- **Finalitat del tractament:** Gestió acadèmica, administrativa, i de comunicació amb les families i avaluació. 
+- **Tipus de dades que es recollixen**: Identificatives (nom,DNI…), acadèmiques i imatges de activitats educatives. 
+- **Base legal:** Consentiments, obligació legal o interès legítim. 
+- **Conservació de les dades:** Temps determinar segons normativa educativa. 
+- **Drets dels usuaris:** Accés, rectificació, suspenssió, oposició, portabilitat i limitació. 
+- **Comparació de dades**: Amb entitats educatives, administracions públiques o tercers si és necessari (per exemple, les pràctiques de FP). 
+- **Mesures de seguretat:** Protecció física i digital per evitar accessos no autoritzats. 
+- **üs de plataformes digitals:** Normativa sobre Google Classroom, Moodle, etc. 
+
+**POLÍTIQUES DE PRIVACITAT DEL CPD:** 
+
+- **Control d’accés:** Només personal autoritzat pot accedir als servidors i bases de dades. 
+- **Encriptació i protecció:** Xifrat de dades i comunicacions, ús de VPN per a connexions externes. 
+- **Monitorització i registres:** Registre d’accessos i auditories de seguretat periòdiques. 
+- **Còpies de seguretat:** Backups regulars i emmagatzematges segurs. 
+- **Política de destrucció de dades:** Eliminació segura quan ja no siguin necessàries. 
+- **Gestió d’incidents:** Protocol en cas de ciberatacs o filtracions de dades. 
+- **Compliment normatiu:** Adaptació a les lleis de protecció de dades i bones pràctiques de seguretat informàtica. 
+
+**ALGUNES RECOMANACIONS:** 
+
+- **Formació:** Personal i alumnes han de rebre informació sobre protecció de dades i bones pràctiques digitals. 
+- **Consentiments informats:** Cal obtenir l’autorització de pares o tutors per a l’ús d’imatges o dades sensibles. 
+- **Auditories de seguretat:** Realitzar controls periòdics per a detectar possibles vulnerabilitats. 
+# <a name="_page6_x72.00_y72.00"></a>**PROTECCIÓ INTERNA I EXTERNA** 
+Pla de seguretat informàtica per al CPD de l’institut. Per a garantir la seguretat del nostre CPD, hem de establir unes mesures i controls per tal de millorar la seguretat i protegir les dades. Per això hem de fer el següent: 
+
+- Protecció Permimetral i Xarxa 
+- Tallafocs (Firewall): implementar un firewall perimetral entre la xarxa de l’institut i Interent. 
+  - Bloquejar ports innecessaris. 
+  - Permetre només trànsit essencial 
+  - Filtrar tràfic sospitós 
+- Sistemes de Detecció i Prevenció d’Intrusions 
+  - Atacs de força bruta 
+  - Escanejos de ports 
+- Segmentació de Xarxa amb VLANs 
+
+  Aplicar ACLs per a evitar que dispositius no autoritzats accedixquen a altres VLANs 
+
+- VLAN 10: Professorat 
+- VLAN 20: Alumnes ESO/Batx 
+- VLAN 30: Alumnes Cicles 
+- DMZ: Servidors exposats a Internet 
+- Seguretat dels Servidors del CPD 
+- Protecció Física del CPD 
+  - Accés restringit amb lector de targetes i càmares de seguretat. 
+  - Sensors de temperatura, foc i humitat. 
+- Autenticació i Control d’Accés 
+  - Contrasenyes robustes i segures amb canvis cada cert temps. 
+  - Només personal autoritzat pot administrar els servidors. 
+- Còpies de Seguretat i Recuperació 
+- Fer backups diaris amb còpies en un servidor extern fora de la ubicació principal. 
+- Realitzar simulacres de recuperació de dades cada cert temps. 
+- Seguretat dels Dispositius i Usuaris 
+- Protecció d’Estacions de Treball 
+  - Instal·lar antivirus a tots els equips. 
+  - Xifratge de discs 
+- Seguretat en la Xarxa Wi-Fi 
+- Separar la Wi-Fi de convidats de la Wi-Fi interna 
+- Utilitzar WPA3 i desactivar WPS 
+- Resposta a Incifdents 
+- Pla de Resposta a Incidents 
+- Crear un protocol de resposta a incidents amb identificació, contenció, anàlisi, recuperació i informe final 
+- Formació 
+- Formació per a personal i alumnes 
+- Sessions periòdiques sobre pràctiques de seguretat 
+- Simulacres de phishing 
+- Guia d’ús segur de dispositius i contrasenyes 
+  # <a name="_page7_x72.00_y292.84"></a>**PROCEDIMENTS DE CÒPIES I RESTAURACIÓ** 
+**COPIES DE SEGURETAT:** 
+
+- En el nostre cas, fem servir l'aplicació de AOMEI backuper, on realitzarem les còpies de seguretat de dades crítiques. 
+- Realitzarem backups diaris amb còpies emmagatzemades en un servidor extern, així augmentem la seguretat i integritat de les dades. 
+- Considerem com protecció física del CPD amb accés restringit i control de seguretat. 
+- Destrucció de dades peer eliminar de manera segura la informació quan ja no siga necessaria. 
+
+**RESTAURACIÓ** 
+
+- En general, fem còpies diaries, la recuperació també la faríem en la mateixa aplicació, mitjançant el software de AOMEI backuper. 
+# <a name="_page8_x72.00_y72.00"></a>**PLA EN CAS DE FALLADA** 
+Haurà de tenir diverses fases per a garantir la continuïtat del servei i la protecció de les dades.  
+
+- Analitzar els riscos i identificar les fallades: 
+  - Identificar els possibles riscos (fallades elèctriques, ciberatacs, desastres naturals, errors de maquinari o programari). 
+  - Evaluar l’impacte de cada risc en els serveis de l’institut. 
+- Protocol de resposta: 
+  - Informar a l’equip tècnic i les autoritats corresponents 
+  - Si és una fallada de seguretat, tallar les connexions externes. 
+  - Depenent del tipus de fallada, aplicar solucions com la restauració de sistemes. 
+- Pla de contingència i continuitat: 
+  - Assegurar que hi ha còpies diàries en ubicacions externes al cpd. 
+  - Implementar procediments per a la restauració ràpida de dades. 
+  - Tindre servidors alternatius o un CPD secundari e altra ubicació. 
+  - Utilitzar sistemes SAI i generadors. 
+- Pla de recuperació: 
+  - Prioritzar la restauració de serveis crítics. 
+  - Comprovar la integritat de les dades després de la recuperació. 
+  - Realitzar comprovacions periòdiques al pla de recuperació per assegurar que funciona en cas de fallada. 
+- Comunicació i notificació: 
+  - Informar als usuaris sobre els temps estimats de recuperació 
+- Avaluació post-incident i millora : 
+- Analitzar les causes de la fallida i determinar les mesures per a previndre futurs problemes. 
+- Actualitzar el pla amb les noves millores. 
+# <a name="_page9_x72.00_y72.00"></a>MANUAL D’USUARI 
+**1 - ACCÉS AL CPD** 
+
+- Només personal autoritzat pot accedir a la sala on estarà el CPD. 
+- Càmeres de seguretat, que hi han instal·lades al voltat de l’institut. 
+- S’ha de registrar cada accés en el llibre de control d’entrada i d’eixida. 
+
+**2 - NO HI HA ACCÉS REMOT** 
+
+- Totes les tasques d’administració es realitzen presencialment al CPD. 
+- No es permet connexió externa als servidors de seguretat. 
+
+**3 - ÚS DELS SERVIDORS I LA XARXA ESTRUCTURA DEL CPD** 
+
+- Xarxa segmentada per VLANs per seguretat i organització. 
+  - VLAN 10: Professorat 
+  - VLAN 20: Alumnes Eso/Batxillerat 
+  - VLAN 30: Alumnes Cicles 
+- Servidors principals: 
+- Windows Server 19/22 per gestió d’usuaris i arxius. 
+- Servidor dels fitxers ( File Server ) amb NAS per emmagatzematge segur. 
+- Servidor de base de dades per aplicacions institucionals. 
+
+**ACCÉS A FITXERS I DADES** 
+
+- Els arxius institucionals estan en el server dels fitxer, només accessibles des dels ordenadors conectats a la xarxa del CPD. 
+- Accés a la sala esta restringit segons els permisos: 
+- Administradors: Accés complet. 
+- Personal autoritzat: Accés limitat a les seues funcions. 
+
+**4 -** **SEGURETAT I PROTECCIÓ DE DADES** 
+
+- Tallafocs intern ja que l’altre el té la macrolan que ens dona l’internet des de conselleria. 
+- SIEM per a monitorització de seguretat a temps real. 
+- Xifratge de dades en emmagatzematge i transmissions internes. 
+- Control d’auditories per a detectar accessos sospitosos. 
+- Política de canvi de contrasenyes cada cert temps. 
+# <a name="_page10_x72.00_y72.00"></a>GUIA D’ADMINISTRACIÓ DEL CPD 
+**1 - INFRAESTRUCTURA DEL CPD** 
+
+**COMPONENTS PRINCIPALS** 
+
+- Router principal: Mikrotik CHR 
+- Switch de xarxa: Cisco IOU L2 per a gestionar les diferents VLANs 
+- Sistema d’emmagatzematge: NAS dedicat amb windows server. 
+- SAI ( UPS ) per evitar apagades sobtades i pèrdua de dades. 
+
+**MANTENIMENT FÍSIC** 
+
+- Revisió mensual de l’estat de cables i connexions. 
+- Control de temperatura i humitat per evitar sobreescalfament. 
+- Neteja regular per evitar problemes. 
+
+**2 - POLÍTIQUES DE SEGURETAT** 
+
+**RESTRICCIONS I PROTOCOLS D’ACCÉS** 
+
+- Només personal autoritzat pot accedir al CPD. 
+- No hi ha connexió remota als servidors ni accés extern. 
+- Política de canvis de contrasenyes cada cert temps. 
+- Restricció d’ús de dispositius USB en els servidors per evitar malware. 
+
+**3 - CÒPIES DE SEGURETAT I RESTAURACIÓ** 
+
+**BACKUPS I PROTECCIÓ DE DADES** 
+
+- Còpies de seguretat diàries amb AOMEI Backupper. 
+- Almenys una còpia externa semanal emmagatzemada en un disc dur extern. 
+  - Disc dur extern: Kingston XS2000 Portable SSD 4TB USB 3.2 
+- Proves de restauració periòdiques per a garantir la recuperació de dades en cas d’incendi o algún altre problema. 
+
+**4 - MONITORITZACIÓ I RESPOSTA A INCIDENTS** 
+
+**SISTEMES DE SUPERVISIÓ** 
+
+- SIEM per detectar accessos no autoritzats. 
+- Suricata ( detecció d’intrusos ) per bloquejar intents de ciberatacs. 
+- Alertes automàtiques en cas d’intents d’accés no autoritzat. 
+
+**PROCEDIMENTS** 
+
+- En cas de intrusió o atac, es bloqueja l’accés i s’investiga l’oritgen. 
+- Si es detecta falla del sistema, es procedeix a restaurar la ultima còpia. 
+- Qualsevol incident ha de ser registrat i notificat als responsables.** 
+# **DOCUMENTACIÓ DEL CPD FÍSIC DE <a name="_page11_x72.00_y98.45"></a>L’INSTITUT** 
+**1- Introducció** 
+
+Aquest document descriu l’estructura, la configuració i les decisions preses per a l’implementació del CPD físic de l’institut. L’objectiu principal és garantir la seguretat, eficiència i escalabilitat del sistema asegurant que només el personal autoritzat i qualificat puga accedir. 
+
+**2- Arquitectura del CPD** 
+
+**2.1. Infraestructura de Xarxa** 
+
+L’arquitectura de xarxa es basa en un model jeràrquic segmentat per VLANs per garantir una millor seguretat i gestió. 
+
+**2.1.1. Topologia de xarxa** 
+
+- Xarxa jeràrquica (arbre) 
+- Router principal: Mikrotik CHR. 
+- Switch principal: Cisco IOU L2/3 per a gestió de VLANs 
+- Segmentació de xarxa per VLANS: 
+- VLAN 10: Professorat 
+- VLAN 20: Alumnes Eso/Batx 
+- VLAN 30: Alumnes Cicles 
+2. **Servidors principals** 
+- Windows Server 2019/22 per a la gestió d’usuaris i arxius. 
+- Servidor de fitxers (File Server Role) amb NAS dedicat. 
+- Servidor de bases de dades per a aplicacions institucionals. 
+- Servidor web per a allotjament d’aplicacions internes. 
+3. **Connexió i seguretat** 
+- No hi ha accés remot per garantir la seguretat. 
+- Accés físic restringit mitjançant targetes d’identificació. 
+- Firewall perimetral per bloquejar accessos externs no autoritzats. 
+- SIEM i Suricata per a la monitorització de seguretat i detecció d’intrusions. 
+
+**3 - CONFIGURACIÓ DEL CPD** 
+
+1. **Configuració de Windows Server** 
+- Active Directory ( AD ): 
+  - Gestió de permisos i rols d’usuari. 
+  - Group Policy Management per a aplicar configuracions de seguretat. 
+- DHCP i DNS: 
+  - DHCP per a l’assignació dinàmica d’adreces IP. 
+  - DNS intern per a la resolució de noms dins de la xarxa. 
+- Servidor de fitxers: 
+- Compartiments d’arxius segurs per departaments. 
+- Accés restringit segons els permisos. 
+2. **Configuració de seguretat.** 
+- Firewall activat per controlar ports i protocols. 
+- SIEM per monitoritzar la seguretat en temps real. 
+- Antivirus empresarial i encriptació de dades sensibles. 
+- Còpies de seguretat diàries amb AOMEI Backupper. 
+3. **Protecció física** 
+- Accés restringit amb targetes d’identificació i videovigilància. 
+- Sensors de temperatura i humitat per evitar sobreescalfament. 
+- Sistema SAI ( UPS ) per evitar apagades sobtades. 
+
+**4 - DECISIONS DE DISSENY I IMPLEMENTACIÓ** 
+
+1. **Elecció del Sistema Operatiu** 
+- Windows server 19/22 per la seua compatibilitat amb les eines administratives i educatives. 
+- NAS per emmagatzematge segur i escalable. 
+2. **Restricciño de l’accés remot** 
+- Per garantir la seguretat, no es permet cap accés remot. 
+- Totes les operacions administratives es realitzen al CPD físic. 
+3. **Escalabilitat i futur CPD** 
+- L’arquitectura permet afegir nous servidors i serveis segons les necessitats. 
+- Es preveu la possibilitat d’intgrar més VLANs per a futurs departaments. 
+- Opcions d’expansió de l’emmagatzemantge mitjançant nous discs NAS. 
+
+**5 - MONITORITZACIÓ I RESPOSTA D’INCIDENTS** 
+
+1. **Sistemes de Supervisió** 
+- SIEM per a detectar accessos no autoritzats. 
+- Suricata per a la detecció d’intrusos. 
+- Logs d’auditoria per registrar totes les accions administratives. 
+2. **Protocols de Resposta a Incidents** 
+- Bloquig inmediat en cas de detecció d’intrusió. 
+- Restauració de dades des de l’última còpia de seguretat si es detecta corrupció o pèrdua de dades. 
+- Notificació als responsables i registre d’incidents. 
+
+Aquest  apartat  detalla  la  configuració  del  nostre  CPD  físic  de  l’institut,  amb  un enfocament  en  seguretat,  organització  i  eficiència.  Garantim  que  l’accés  estiga restringit, amb protocols adequats i estrictes per a la gestió i protecció de les dades del centre. 
+
+**TASQUES I TRELLO:** 
+
+Les tasques, en aquest segon sprint, com solament som 2, han sigut repartides a parts iguals, aquest és el procés que ha dut el nostre trello: 
+
+1. Identificació de tasques a realitzar. 
+1. Asignació de tasques per cada membre de l’equip. 
+1. Desplaçament de cada tasca segons el seu estat. 
+
+**TRELLO INICIAL:** 
+
+![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.003.jpeg)
+
+**TRELLO DURANT EL PROCÉS:** 
+
+![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.004.jpeg)
+
+**TRELLO FINAL:** 
+
+![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.005.jpeg)
+Xavi Garcia Ferrando Marc Brines Bañuls 
+
+16 
