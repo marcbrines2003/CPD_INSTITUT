@@ -2,7 +2,6 @@
 
 DEFINICIÓ DE OBJETIUS DEL PROJECTE
 
-Josep Calvo
 
 Marc Brines Bañuls 
 
