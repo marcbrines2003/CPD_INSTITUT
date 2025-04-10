@@ -286,7 +286,7 @@ Algunes de les dades que emmagatzemarà i de ahí la creació d’aquest project
 
 - **Correus electrònics i comunicacions:** Historial de comunicacions del personal. 
 - **Documents i plantilles administratives:** Arxius de treball habituals per al personal 
-Xavi Garcia Ferrando, Marc Brines Bañuls                                            18 
+Xavi Garcia Ferrando, Marc Brines Bañuls                                             
 
 
 
@@ -656,26 +656,6 @@ Les tasques, en aquest segon sprint, com solament som 2, han sigut repartides a 
 ![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.004.jpeg)
 
 
-# 3 i 4 Sprint - Instal·lació
-
-## Marc Brines Bañuls  
-## Xavi Garcia Ferrando
-
----
-
-## ÍNDEX
-
-- INSTAL·LACIÓ DEL SERVER
-- PROXMOX-ISO
-- VIRTUALBOX
-- ROUTER INSTAL·LACIÓ
-- LANS AFEGIDES
-- WAN
-- IP DE LES MV
-- TALLAFOCS ACTIUS
-- TRELLO
-
----
 
 ## INSTAL·LACIÓ DEL SERVER
 
@@ -819,7 +799,7 @@ Utilitzem sistemes com **SIEM** i **Suricata** per:
 
 **TRELLO FINAL:** 
 
-![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.005.jpeg)
+
 Xavi Garcia Ferrando Marc Brines Bañuls 
 
-16 
+
