@@ -655,6 +655,168 @@ Les tasques, en aquest segon sprint, com solament som 2, han sigut repartides a 
 
 ![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.004.jpeg)
 
+
+# 3 i 4 Sprint - Instal·lació
+
+## Marc Brines Bañuls  
+## Xavi Garcia Ferrando
+
+---
+
+## ÍNDEX
+
+- INSTAL·LACIÓ DEL SERVER
+- PROXMOX-ISO
+- VIRTUALBOX
+- ROUTER INSTAL·LACIÓ
+- LANS AFEGIDES
+- WAN
+- IP DE LES MV
+- TALLAFOCS ACTIUS
+- TRELLO
+
+---
+
+## INSTAL·LACIÓ DEL SERVER
+
+Primer que res, tinguent el nostre esquema clar que volem plasmar al treball, mirem les necessitats i eines que anem a gastar.  
+Una vegada fet així, instal·lem en un pen el nostre Proxmox, que serà on instal·lem els nostres tres servidors:
+
+- Formatejar unitat USB rufus amb el sistema operatiu de Proxmox
+- Instalar en un equip amb disc dur net
+- Seguir els passos de instalació i establir un nom d’usuari, contrassenya i adreça IP
+- Connectar remotament amb un segon equip en una red interna
+- Obri el navegador al segon equip i introduir la IP donada pel servidor
+- Apareixerà la interfície de Proxmox i ens loguegem amb les nostres credencials
+
+---
+
+## PROXMOX-ISO
+
+Importem al disc local del Proxmox les següents ISO:
+
+- Windows Server
+- Ubuntu Server
+- Lliurex Server
+
+Inicialment treballàvem amb un servidor Proxmox, però degut a problemes d’emmagatzematge i xarxa hem passat a VBox.
+
+---
+
+## VIRTUALBOX
+
+Degut a limitacions tècniques amb Proxmox, hem passat a VirtualBox per treballar millor i simular el projecte.
+
+### Creació de les màquines virtuals:
+
+- **Router**: configuracions de xarxa i VLANs
+- **Lliurex**: servidor dels clients
+- **Ubuntu**: servidor dels clients
+- **Windows**: servidor dels clients
+- **Windows_client**: representa al professorat
+- **Ubuntu_client**: representa alumnat de cicles i FP
+- **Lliurex_client**: representa alumnat de ESO i Batxillerat
+
+### Descàrrega de les ISO:
+
+- [Windows](https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022)
+- [Ubuntu](https://ubuntu.com/download/server)
+- [Lliurex](https://wiki.edu.gva.es/lliurex/tiki-index.php?page=lliuwin)
+
+---
+
+## ROUTER INSTAL·LACIÓ
+
+Configurem la xarxa amb una màquina de router **OpenWrt** en VirtualBox.
+
+Les credencials del router han de ser les del nostre grup.
+
+---
+
+## LANS AFEGIDES
+
+- **LAN 1**: Windows  
+- **LAN 2**: Ubuntu  
+- **LAN 3**: Lliurex
+
+Afegim les targetes de xarxa corresponents a cada màquina virtual:
+
+- Targeta mv Lliurex
+- Targeta mv Ubuntu Server
+- Targeta mv Windows
+
+---
+
+## WAN
+
+La WAN connecta l’institut amb l’exterior a través de la **MACROLAN** de la Conselleria.
+
+Aquesta xarxa:
+
+- Actua com a filtre
+- Millora la seguretat
+- Controla el tràfic que entra i ix d’Internet
+
+Exemple: accés a Microsoft Teams → CPD → WAN → MACROLAN → Internet
+
+---
+
+## IP DE LES MV
+
+Comprovem que les màquines virtuals tenen IP:
+
+- Ubuntu
+- Windows
+
+---
+
+## TALLAFOCS ACTIUS
+
+No cal instal·lar un tallafocs perimetral, ja que la MACROLAN ja filtra el tràfic cap a Internet.
+
+També hem aplicat tallafocs interns en cada màquina virtual.
+
+### OPTIMITZAR RENDIMENT I CONTROLAR EL TRÀFIC
+
+#### Segmentació per VLANs
+
+- VLAN 10: Professorat
+- VLAN 20: Alumnes ESO/Batxillerat
+- VLAN 30: Alumnes de Cicles Formatius
+
+Hi ha una **DMZ** per als servidors exposats a Internet.
+
+#### Tallafocs i filtratge
+
+- Cada màquina té un tallafocs actiu
+- La MACROLAN actua com a tallafocs perimetral
+
+#### Monitoratge actiu del tràfic
+
+Utilitzem sistemes com **SIEM** i **Suricata** per:
+
+- Monitoritzar tràfic en temps real
+- Detectar comportaments sospitosos
+- Llançar alertes
+
+> *No s’ha pogut aplicar per falta de coneixements i temps*
+
+---
+
+## TRELLO
+
+### INICIAL:
+
+*(imatge o estructura inicial no detallada)*
+
+### FINAL:
+
+*(imatge o estructura final no detallada)*
+
+---
+
+
+
 **TRELLO FINAL:** 
 
 ![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.005.jpeg)
