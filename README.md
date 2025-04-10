@@ -697,6 +697,8 @@ Degut a limitacions tècniques amb Proxmox, hem passat a VirtualBox per treballa
 - **Ubuntu_client**: representa alumnat de cicles i FP
 - **Lliurex_client**: representa alumnat de ESO i Batxillerat
 
+![](/images/Imagen de WhatsApp 2025-04-10 a las 10.25.56_5ca88b95.jpg)
+
 ### Descàrrega de les ISO:
 
 - [Windows](https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022)
