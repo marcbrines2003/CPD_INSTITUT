@@ -1,10 +1,7 @@
 ![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.001.png)
-
-DEFINICIÓ DE OBJETIUS DEL PROJECTE
-
-
+# PROJECTE CPD INSTITUT
+## DEFINICIÓ DE OBJETIUS DEL PROJECTE
 Marc Brines Bañuls 
-
 Xavi Garcia Ferrando 
 
 Aquest document conté una explicació detallada dels objectius i requisits relacionats amb el Centre de Processament de Dades (CPD) virtual d’un institut. Inclou una descripció general d’aquests objectius, com ara la centralització de la gestió de la informació, l’optimització dels recursos informàtics i la seguretat de la informació. A més, busca fomentar la innovació educativa, garantir l’escalabilitat i el compliment de les normatives. 
