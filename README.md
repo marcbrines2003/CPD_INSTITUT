@@ -17,11 +17,11 @@ L’estructura d’aquest treball està organitzada en diverses seccions que abo
 1. **Cronograma  i  horaris:**  Es  proporciona  als  usuaris  un  pla  de  treball  ben organitzat  que  inclou,  però  no  es  limita,  a  tasques  clarament  definides,  des  de l’establiment dels objectius fins a la implementació del sistema i la formació final. 
 1. **Pressupost**: Una estimació de despeses aproximada i detallada. 
 # <a name="_page3_x72.00_y72.00"></a>**PLÀNOL COMPLET DELS COMPONENTS** 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.002.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.002.jpeg)
 
 *Fig 1: Estructura dels components que necessitarem.*
 # <a name="_page3_x72.00_y395.18"></a>**PLÀNOL ESTRUCTURAT DE COM QUEDARIA EL CPD** 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.003.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.003.jpeg)
 
 *Fig 2: Estructura de la xarxa del CPD.* 
 
@@ -117,19 +117,19 @@ Defineix les característiques de qualitat i criteris d’implementació:
 # <a name="_page9_x72.00_y72.00"></a>**CRONOGRAMA** 
 **INICIAL:** 
 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.004.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.004.jpeg)
 
 **EN PROCÉS:** 
 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.005.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.005.jpeg)
 # <a name="_page10_x72.00_y72.00"></a>**HORARI DE TREBALL** 
 **FINAL:** 
 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.006.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.006.jpeg)
 
 **HORARI DE TREBALL DELS SPRINTS:** 
 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.007.png)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.007.png)
 # <a name="_page11_x72.00_y72.00"></a>**PRESSUPOST NECESSARI PER AL CPD VIRTUAL** 
 **SEGURETAT SOCIAL PER ALS TREBALLADORS Valor estimat =** 200-300€ per treballador
 #### <a name="_page11_x72.00_y163.96"></a>**1. Maquinari i Infraestructura** 
@@ -291,16 +291,15 @@ Algunes de les dades que emmagatzemarà i de ahí la creació d’aquest project
 - **Documents i plantilles administratives:** Arxius de treball habituals per al personal 
 Xavi Garcia Ferrando, Marc Brines Bañuls                                            18 
 
-![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.001.png)
+![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.001.png)
 
-**SEGON SPRINT** 
 
 
 Xavi Garcia Ferrando 
 
 Marc Brines Bañuls
 
-<img src="../planol.jpg" alt="Plano">
+<img src="/images/planol.jpg" alt="Plano">
 
 
 Aquest diagrama mostra la disposició dels servidors, dispositius d’emmagatzematge i components de la xarxa.  
@@ -656,15 +655,15 @@ Les tasques, en aquest segon sprint, com solament som 2, han sigut repartides a 
 
 **TRELLO INICIAL:** 
 
-![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.003.jpeg)
+![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.003.jpeg)
 
 **TRELLO DURANT EL PROCÉS:** 
 
-![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.004.jpeg)
+![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.004.jpeg)
 
 **TRELLO FINAL:** 
 
-![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.005.jpeg)
+![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.005.jpeg)
 Xavi Garcia Ferrando Marc Brines Bañuls 
 
 16 
