@@ -294,12 +294,7 @@ Xavi Garcia Ferrando, Marc Brines Bañuls                                       
 ![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.001.png)
 
 
-
-Xavi Garcia Ferrando 
-
-Marc Brines Bañuls
-
-<img src="/images/planol.jpg" alt="Plano">
+![](/images/planol.jpg)
 
 
 Aquest diagrama mostra la disposició dels servidors, dispositius d’emmagatzematge i components de la xarxa.  
