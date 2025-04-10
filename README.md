@@ -1,4 +1,4 @@
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.001.png)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.001.png)
 
 DEFINICIÓ DE OBJETIUS DEL PROJECTE
 
