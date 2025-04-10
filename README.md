@@ -1,10 +1,7 @@
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.001.png)
-
-DEFINICIÓ DE OBJETIUS DEL PROJECTE
-
-
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.001.png)
+# PROJECTE CPD INSTITUT
+## DEFINICIÓ DE OBJETIUS DEL PROJECTE
 Marc Brines Bañuls 
-
 Xavi Garcia Ferrando 
 
 Aquest document conté una explicació detallada dels objectius i requisits relacionats amb el Centre de Processament de Dades (CPD) virtual d’un institut. Inclou una descripció general d’aquests objectius, com ara la centralització de la gestió de la informació, l’optimització dels recursos informàtics i la seguretat de la informació. A més, busca fomentar la innovació educativa, garantir l’escalabilitat i el compliment de les normatives. 
@@ -17,11 +14,11 @@ L’estructura d’aquest treball està organitzada en diverses seccions que abo
 1. **Cronograma  i  horaris:**  Es  proporciona  als  usuaris  un  pla  de  treball  ben organitzat  que  inclou,  però  no  es  limita,  a  tasques  clarament  definides,  des  de l’establiment dels objectius fins a la implementació del sistema i la formació final. 
 1. **Pressupost**: Una estimació de despeses aproximada i detallada. 
 # <a name="_page3_x72.00_y72.00"></a>**PLÀNOL COMPLET DELS COMPONENTS** 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.002.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.002.jpeg)
 
 *Fig 1: Estructura dels components que necessitarem.*
 # <a name="_page3_x72.00_y395.18"></a>**PLÀNOL ESTRUCTURAT DE COM QUEDARIA EL CPD** 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.003.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.003.jpeg)
 
 *Fig 2: Estructura de la xarxa del CPD.* 
 
@@ -117,19 +114,19 @@ Defineix les característiques de qualitat i criteris d’implementació:
 # <a name="_page9_x72.00_y72.00"></a>**CRONOGRAMA** 
 **INICIAL:** 
 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.004.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.004.jpeg)
 
 **EN PROCÉS:** 
 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.005.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.005.jpeg)
 # <a name="_page10_x72.00_y72.00"></a>**HORARI DE TREBALL** 
 **FINAL:** 
 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.006.jpeg)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.006.jpeg)
 
 **HORARI DE TREBALL DELS SPRINTS:** 
 
-![](Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.007.png)
+![](/images/Aspose.Words.b9069859-c84a-4c5d-aaec-a1ed4bcca626.007.png)
 # <a name="_page11_x72.00_y72.00"></a>**PRESSUPOST NECESSARI PER AL CPD VIRTUAL** 
 **SEGURETAT SOCIAL PER ALS TREBALLADORS Valor estimat =** 200-300€ per treballador
 #### <a name="_page11_x72.00_y163.96"></a>**1. Maquinari i Infraestructura** 
@@ -289,18 +286,14 @@ Algunes de les dades que emmagatzemarà i de ahí la creació d’aquest project
 
 - **Correus electrònics i comunicacions:** Historial de comunicacions del personal. 
 - **Documents i plantilles administratives:** Arxius de treball habituals per al personal 
-Xavi Garcia Ferrando, Marc Brines Bañuls                                            18 
-
-![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.001.png)
-
-**SEGON SPRINT** 
+Xavi Garcia Ferrando, Marc Brines Bañuls                                             
 
 
-Xavi Garcia Ferrando 
 
-Marc Brines Bañuls
 
-<img src="../planol.jpg" alt="Plano">
+![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.002.jpeg)
+
+
 
 
 Aquest diagrama mostra la disposició dels servidors, dispositius d’emmagatzematge i components de la xarxa.  
@@ -656,15 +649,157 @@ Les tasques, en aquest segon sprint, com solament som 2, han sigut repartides a 
 
 **TRELLO INICIAL:** 
 
-![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.003.jpeg)
+![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.003.jpeg)
 
 **TRELLO DURANT EL PROCÉS:** 
 
-![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.004.jpeg)
+![](/images/Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.004.jpeg)
+
+
+
+## INSTAL·LACIÓ DEL SERVER
+
+Primer que res, tinguent el nostre esquema clar que volem plasmar al treball, mirem les necessitats i eines que anem a gastar.  
+Una vegada fet així, instal·lem en un pen el nostre Proxmox, que serà on instal·lem els nostres tres servidors:
+
+- Formatejar unitat USB rufus amb el sistema operatiu de Proxmox
+- Instalar en un equip amb disc dur net
+- Seguir els passos de instalació i establir un nom d’usuari, contrassenya i adreça IP
+- Connectar remotament amb un segon equip en una red interna
+- Obri el navegador al segon equip i introduir la IP donada pel servidor
+- Apareixerà la interfície de Proxmox i ens loguegem amb les nostres credencials
+
+---
+
+## PROXMOX-ISO
+
+Importem al disc local del Proxmox les següents ISO:
+
+- Windows Server
+- Ubuntu Server
+- Lliurex Server
+
+Inicialment treballàvem amb un servidor Proxmox, però degut a problemes d’emmagatzematge i xarxa hem passat a VBox.
+
+---
+
+## VIRTUALBOX
+
+Degut a limitacions tècniques amb Proxmox, hem passat a VirtualBox per treballar millor i simular el projecte.
+
+### Creació de les màquines virtuals:
+
+- **Router**: configuracions de xarxa i VLANs
+- **Lliurex**: servidor dels clients
+- **Ubuntu**: servidor dels clients
+- **Windows**: servidor dels clients
+- **Windows_client**: representa al professorat
+- **Ubuntu_client**: representa alumnat de cicles i FP
+- **Lliurex_client**: representa alumnat de ESO i Batxillerat
+
+### Descàrrega de les ISO:
+
+- [Windows](https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022)
+- [Ubuntu](https://ubuntu.com/download/server)
+- [Lliurex](https://wiki.edu.gva.es/lliurex/tiki-index.php?page=lliuwin)
+
+---
+
+## ROUTER INSTAL·LACIÓ
+
+Configurem la xarxa amb una màquina de router **OpenWrt** en VirtualBox.
+
+Les credencials del router han de ser les del nostre grup.
+
+---
+
+## LANS AFEGIDES
+
+- **LAN 1**: Windows  
+- **LAN 2**: Ubuntu  
+- **LAN 3**: Lliurex
+
+Afegim les targetes de xarxa corresponents a cada màquina virtual:
+
+- Targeta mv Lliurex
+- Targeta mv Ubuntu Server
+- Targeta mv Windows
+
+---
+
+## WAN
+
+La WAN connecta l’institut amb l’exterior a través de la **MACROLAN** de la Conselleria.
+
+Aquesta xarxa:
+
+- Actua com a filtre
+- Millora la seguretat
+- Controla el tràfic que entra i ix d’Internet
+
+Exemple: accés a Microsoft Teams → CPD → WAN → MACROLAN → Internet
+
+---
+
+## IP DE LES MV
+
+Comprovem que les màquines virtuals tenen IP:
+
+- Ubuntu
+- Windows
+
+---
+
+## TALLAFOCS ACTIUS
+
+No cal instal·lar un tallafocs perimetral, ja que la MACROLAN ja filtra el tràfic cap a Internet.
+
+També hem aplicat tallafocs interns en cada màquina virtual.
+
+### OPTIMITZAR RENDIMENT I CONTROLAR EL TRÀFIC
+
+#### Segmentació per VLANs
+
+- VLAN 10: Professorat
+- VLAN 20: Alumnes ESO/Batxillerat
+- VLAN 30: Alumnes de Cicles Formatius
+
+Hi ha una **DMZ** per als servidors exposats a Internet.
+
+#### Tallafocs i filtratge
+
+- Cada màquina té un tallafocs actiu
+- La MACROLAN actua com a tallafocs perimetral
+
+#### Monitoratge actiu del tràfic
+
+Utilitzem sistemes com **SIEM** i **Suricata** per:
+
+- Monitoritzar tràfic en temps real
+- Detectar comportaments sospitosos
+- Llançar alertes
+
+> *No s’ha pogut aplicar per falta de coneixements i temps*
+
+---
+
+## TRELLO
+
+### INICIAL:
+
+*(imatge o estructura inicial no detallada)*
+
+### FINAL:
+
+*(imatge o estructura final no detallada)*
+
+---
+
+
 
 **TRELLO FINAL:** 
 
-![](Aspose.Words.af545279-911e-46bc-a966-713dfb05dcaf.005.jpeg)
+
 Xavi Garcia Ferrando Marc Brines Bañuls 
 
-16 
+
