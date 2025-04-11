@@ -697,7 +697,7 @@ Degut a limitacions tècniques amb Proxmox, hem passat a VirtualBox per treballa
 - **Ubuntu_client**: representa alumnat de cicles i FP
 - **Lliurex_client**: representa alumnat de ESO i Batxillerat
 
-![](/images/servers.png)
+![](/images/servers.jpg)
 
 ### Descàrrega de les ISO:
 
@@ -705,7 +705,7 @@ Degut a limitacions tècniques amb Proxmox, hem passat a VirtualBox per treballa
 - [Ubuntu](https://ubuntu.com/download/server)
 - [Lliurex](https://wiki.edu.gva.es/lliurex/tiki-index.php?page=lliuwin)
 
-![](/images/isos.png)
+![](/images/isos.jpg)
 
 ---
 
@@ -715,6 +715,8 @@ Configurem la xarxa amb una màquina de router **OpenWrt** en VirtualBox.
 
 Les credencials del router han de ser les del nostre grup.
 
+![](/images/router.jpg)
+
 ---
 
 ## LANS AFEGIDES
@@ -723,11 +725,17 @@ Les credencials del router han de ser les del nostre grup.
 - **LAN 2**: Ubuntu  
 - **LAN 3**: Lliurex
 
+![](/images/network.jpg)
+
 Afegim les targetes de xarxa corresponents a cada màquina virtual:
 
 - Targeta mv Lliurex
 - Targeta mv Ubuntu Server
 - Targeta mv Windows
+
+![](/images/redinternaLAN1.png)
+![](/images/redinternaLAN2.png)
+![](/images/redinternaLAN3.png)
 
 ---
 
@@ -751,6 +759,9 @@ Comprovem que les màquines virtuals tenen IP:
 
 - Ubuntu
 - Windows
+
+![](/images/ipubuntu.jpg)
+![](/images/ipwindows.jpg)
 
 ---
 
@@ -791,7 +802,11 @@ Utilitzem sistemes com **SIEM** i **Suricata** per:
 
 ### INICIAL:
 
-*(imatge o estructura inicial no detallada)*
+![](/images/trelloinicial.png)
+
+### DURANT EL PROCÉS
+
+![](/images/trellomitja.png)
 
 ### FINAL:
 
