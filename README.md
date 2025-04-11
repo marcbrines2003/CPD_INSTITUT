@@ -697,11 +697,15 @@ Degut a limitacions tècniques amb Proxmox, hem passat a VirtualBox per treballa
 - **Ubuntu_client**: representa alumnat de cicles i FP
 - **Lliurex_client**: representa alumnat de ESO i Batxillerat
 
+![](/images/servers.png)
+
 ### Descàrrega de les ISO:
 
 - [Windows](https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022)
 - [Ubuntu](https://ubuntu.com/download/server)
 - [Lliurex](https://wiki.edu.gva.es/lliurex/tiki-index.php?page=lliuwin)
+
+![](/images/isos.png)
 
 ---
 
