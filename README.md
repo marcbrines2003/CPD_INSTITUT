@@ -819,6 +819,53 @@ Utilitzem sistemes com **SIEM** i **Suricata** per:
 **TRELLO FINAL:** 
 
 
+# Creación de un RAID5
+
+## 1. Creación de máquina virtual con sistema operativo Windows 10
+
+**Fig 1:** Nombre de la máquina  
+**Fig 2:** Memoria y núcleos del procesador  
+**Fig 3:** Configuración del disco duro  
+
+### Creación de RAID 5 y formateo para poder usarlo
+
+**Fig 4:** Añadimos 3 discos de 5GB  
+**Fig 5:** Encendemos Windows  
+**Fig 6:** Entramos en archivos → clic derecho en "Este equipo" → Administrador de discos  
+(Desde aquí elegiremos el tipo de disco, si lo queremos MBR o GPT)  
+
+**Fig 7:** Ya están los discos en MBR, ahora los pondremos en RAID 5  
+**Fig 8:** Ahora pondremos en RAID5 los 3 discos añadidos  
+**Fig 9:** Se abre el asistente  
+**Fig 10:** Añadimos los 3 discos de 5GB  
+**Fig 11:** Le asignamos la letra al disco para que se identifique en nuestro equipo  
+**Fig 12:** Lo formateamos en NTFS (versión más nueva) o FAT (versión más antigua)  
+**Fig 13:** Finalizamos el asistente  
+**Fig 14:** Ahora los discos se crean en dinámico, se sincronizarán y se dará formato  
+
+## 2. Simulación de rotura de un disco
+
+**Fig 15:** Entramos al disco RAID creado y añadimos documentos o ficheros  
+**Fig 16:** Hemos desconectado el disco  
+
+> ¿Se habrán perdido los datos del disco?
+
+**Fig 17:** No, porque cuando se rompe un disco, los datos no se pierden, se van al segundo disco  
+
+## 3. Recuperación (arreglar) el RAID
+
+**Fig 18:** Vamos a apagar el disco  
+**Fig 19:** Vamos a crear  
+**Fig 20:** Creamos un disco de 5GB y lo añadimos  
+**Fig 21:** Discos añadidos  
+**Fig 22:** Encendemos la máquina  
+**Fig 23:** Apartado herramientas → Administración de discos  
+**Fig 24:** Apartado de administración de discos  
+**Fig 25:** El disco nuevo lo pondremos en MBR  
+**Fig 26:** Clic derecho → Reparamos disco  
+**Fig 27:** Disco reparado y añadido  
+
+
 Xavi Garcia Ferrando Marc Brines Bañuls 
 
 
