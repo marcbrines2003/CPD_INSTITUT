@@ -819,53 +819,54 @@ Utilitzem sistemes com **SIEM** i **Suricata** per:
 **TRELLO FINAL:** 
 
 
-# Creación de un RAID5
+# Creació d’un RAID5
 
-## 1. Creación de máquina virtual con sistema operativo Windows 10
+## 1. Creació de màquina virtual amb sistema operatiu Windows 10
 
-**Fig 1:** Nombre de la máquina  
-**Fig 2:** Memoria y núcleos del procesador  
-**Fig 3:** Configuración del disco duro  
+**Fig 1:** Nom de la màquina  
+**Fig 2:** Memòria i nuclis del processador  
+**Fig 3:** Configuració del disc dur  
 
-### Creación de RAID 5 y formateo para poder usarlo
+### Creació de RAID 5 i formatació per a poder utilitzar-lo
 
-**Fig 4:** Añadimos 3 discos de 5GB  
-**Fig 5:** Encendemos Windows  
-**Fig 6:** Entramos en archivos → clic derecho en "Este equipo" → Administrador de discos  
-(Desde aquí elegiremos el tipo de disco, si lo queremos MBR o GPT)  
+**Fig 4:** Afegim 3 discs de 5 GB  
+**Fig 5:** Engeguem Windows  
+**Fig 6:** Entrem en fitxers → clic dret en "Este equip" → Administrador de discs  
+(Des d’ací triarem el tipus de disc, si el volem MBR o GPT)  
 
-**Fig 7:** Ya están los discos en MBR, ahora los pondremos en RAID 5  
-**Fig 8:** Ahora pondremos en RAID5 los 3 discos añadidos  
-**Fig 9:** Se abre el asistente  
-**Fig 10:** Añadimos los 3 discos de 5GB  
-**Fig 11:** Le asignamos la letra al disco para que se identifique en nuestro equipo  
-**Fig 12:** Lo formateamos en NTFS (versión más nueva) o FAT (versión más antigua)  
-**Fig 13:** Finalizamos el asistente  
-**Fig 14:** Ahora los discos se crean en dinámico, se sincronizarán y se dará formato  
+**Fig 7:** Ja estan els discs en MBR, ara els posarem en RAID 5  
+**Fig 8:** Ara posarem en RAID5 els 3 discs afegits  
+**Fig 9:** S’obri l’assistent  
+**Fig 10:** Afegim els 3 discs de 5 GB  
+**Fig 11:** Assignem la lletra al disc perquè es puga identificar en el nostre equip  
+**Fig 12:** El formategem en NTFS (versió més nova) o FAT (versió més antiga)  
+**Fig 13:** Finalitzem l’assistent  
+**Fig 14:** Ara els discs es creen en dinàmic, es sincronitzaran i es donarà format  
 
-## 2. Simulación de rotura de un disco
+## 2. Simulació de trencament d’un disc
 
-**Fig 15:** Entramos al disco RAID creado y añadimos documentos o ficheros  
-**Fig 16:** Hemos desconectado el disco  
+**Fig 15:** Entrem al disc RAID creat i afegim documents o fitxers  
+**Fig 16:** Hem desconnectat el disc  
 
-> ¿Se habrán perdido los datos del disco?
+> Es perdran les dades del disc?
 
-**Fig 17:** No, porque cuando se rompe un disco, los datos no se pierden, se van al segundo disco  
+**Fig 17:** No, perquè quan es trenca un disc, les dades no es perden, passen al segon disc  
 
-## 3. Recuperación (arreglar) el RAID
+## 3. Recuperació (reparar) el RAID
 
-**Fig 18:** Vamos a apagar el disco  
-**Fig 19:** Vamos a crear  
-**Fig 20:** Creamos un disco de 5GB y lo añadimos  
-**Fig 21:** Discos añadidos  
-**Fig 22:** Encendemos la máquina  
-**Fig 23:** Apartado herramientas → Administración de discos  
-**Fig 24:** Apartado de administración de discos  
-**Fig 25:** El disco nuevo lo pondremos en MBR  
-**Fig 26:** Clic derecho → Reparamos disco  
-**Fig 27:** Disco reparado y añadido  
+**Fig 18:** Anem a apagar el disc  
+**Fig 19:** Anem a crear  
+**Fig 20:** Creem un disc de 5 GB i l’afegim  
+**Fig 21:** Discs afegits  
+**Fig 22:** Engeguem la màquina  
+**Fig 23:** Apartat eines → Administració de discs  
+**Fig 24:** Apartat d’administració de discs  
+**Fig 25:** El disc nou el posarem en MBR  
+**Fig 26:** Clic dret → Reparem el disc  
+**Fig 27:** Disc reparat i afegit  
+ 
 
 
-Xavi Garcia Ferrando Marc Brines Bañuls 
+Xavi Garcia Ferrando Marc Brines Bañuls Josep Calvo
 
 
